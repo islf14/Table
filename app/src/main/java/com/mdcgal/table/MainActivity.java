@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String[]item = new String[]{"5",etName.getText().toString(),etLastname.getText().toString()};
+                String[]item = new String[]{"N",etName.getText().toString(),etLastname.getText().toString()};
                 tableDynamic.addItems(item);
             }
         });

@@ -79,7 +79,11 @@ public class TableDynamic {
         newRow();
         while (indexC < header.length){
             newCell();
-            info = (indexC < item.length)? item[indexC++]:"";
+            if (item[indexC] != "N")
+                info = (indexC < item.length)? item[indexC]:"";
+            else
+                info = String.valueOf(data.size());
+            indexC++;
             txtCell.setText(info);
             tableRow.addView(txtCell,newTableRowParams());
         }
